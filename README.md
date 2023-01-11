@@ -34,7 +34,12 @@ See the [full documentation on test suite integration][test-suite-integration].
 
 ```yaml
   - run: |
-      captain run --suite-id captain-examples-minitest --test-results "tmp/reports/*.xml" -- \
+      captain run \
+        --suite-id captain-examples-minitest \
+        --test-results "tmp/reports/*.xml" \
+        --language Ruby \
+        --framework minitest \
+        -- \
         bundle exec rake
     env:
       RWX_ACCESS_TOKEN: ${{ secrets.RWX_ACCESS_TOKEN }}
