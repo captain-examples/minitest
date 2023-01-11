@@ -14,7 +14,7 @@ jobs:
           bundler-cache: true
       - uses: rwx-research/setup-captain@v1
       - run: |
-          captain run --suite-id captain-examples-minitest --test-results "tmp/*.xml" -- \
+          captain run --suite-id captain-examples-minitest --test-results "tmp/reports/*.xml" -- \
             bundle exec rake
         env:
           RWX_ACCESS_TOKEN: ${{ secrets.RWX_ACCESS_TOKEN }}
