@@ -1,0 +1,7 @@
+test-suites:
+  captain-examples-minitest:
+    command: bundle exec rake
+    results:
+      language: Ruby
+      framework: minitest
+      path: tmp/reports/*.xml
