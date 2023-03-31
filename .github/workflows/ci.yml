@@ -13,13 +13,6 @@ jobs:
         with:
           bundler-cache: true
       - uses: rwx-research/setup-captain@v1
-      - run: |
-          captain run \
-            --suite-id captain-examples-minitest \
-            --test-results "tmp/reports/*.xml" \
-            --language Ruby \
-            --framework minitest \
-            -- \
-            bundle exec rake
+      - run: captain run captain-examples-minitest
         env:
           RWX_ACCESS_TOKEN: ${{ secrets.RWX_ACCESS_TOKEN }}
